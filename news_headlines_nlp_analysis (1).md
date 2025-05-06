@@ -60,15 +60,28 @@ news_df = pd.read_csv('news_headlines.csv')
 
 # Display basic information
 print(f"Dataset shape: {news_df.shape}")
-print(f"Time period: {news_df['date'].min()} to {news_df['date'].max()}")
-print("\nColumn names:")
+print(f"Column names:")
 print(news_df.columns.tolist())
 
-# Convert date column to datetime
-news_df['date'] = pd.to_datetime(news_df['date'])
+# Check the first few rows
+print("\nFirst few rows of the dataset:")
+print(news_df.head(2))
+
+# Convert Date column to datetime (note capital "D")
+# Since the date format is "May 01, 2018", we need to parse it correctly
+news_df['Date'] = pd.to_datetime(news_df['Date'], format="%b %d, %Y")
+
+# Display the date range
+print(f"\nTime period: {news_df['Date'].min()} to {news_df['Date'].max()}")
 
 # Create a year-month column for temporal analysis
-news_df['year_month'] = news_df['date'].dt.to_period('M')
+news_df['year_month'] = news_df['Date'].dt.to_period('M')
+
+# Create a column for the year
+news_df['year'] = news_df['Date'].dt.year
+
+# Create a column for the month
+news_df['month'] = news_df['Date'].dt.month
 
 # Sample a few rows
 print("\nSample data:")
@@ -81,7 +94,8 @@ Next, let's create a function to combine all headlines for each date into a sing
 def combine_headlines(row):
     """Combine all headlines in a row into a single string"""
     headlines = []
-    for col in news_df.columns[1:]:  # Skip the date column
+    # Start from column 'Top1' through 'Top25'
+    for col in news_df.columns[1:26]:  # Skip the Date column, include only Top1-Top25
         if pd.notna(row[col]):
             headlines.append(str(row[col]))
     return ' '.join(headlines)
@@ -91,7 +105,7 @@ news_df['combined_headlines'] = news_df.apply(combine_headlines, axis=1)
 
 # Check the distribution of headlines over time
 plt.figure(figsize=(14, 6))
-news_df.groupby(news_df['date'].dt.to_period('M')).size().plot(kind='bar')
+news_df.groupby(news_df['Date'].dt.to_period('M')).size().plot(kind='bar')
 plt.title('Number of Headlines per Month')
 plt.xlabel('Month')
 plt.ylabel('Count')
@@ -560,7 +574,7 @@ news_df['positive'] = news_df['sentiment'].apply(lambda x: x['pos'])
 news_df['compound'] = news_df['sentiment'].apply(lambda x: x['compound'])
 
 # Group by month and calculate average sentiment
-monthly_sentiment = news_df.groupby(news_df['date'].dt.to_period('M')).agg({
+monthly_sentiment = news_df.groupby(news_df['Date'].dt.to_period('M')).agg({
     'negative': 'mean',
     'neutral': 'mean',
     'positive': 'mean',
@@ -568,7 +582,7 @@ monthly_sentiment = news_df.groupby(news_df['date'].dt.to_period('M')).agg({
 }).reset_index()
 
 # Convert Period to datetime for plotting
-monthly_sentiment['date'] = monthly_sentiment['date'].dt.to_timestamp()
+monthly_sentiment['date_ts'] = monthly_sentiment['date'].dt.to_timestamp()
 
 # Plot compound sentiment over time
 plt.figure(figsize=(14, 7))
@@ -693,17 +707,17 @@ Let's track how topics evolve over time:
 # Calculate topic prevalence per month
 topic_cols = [f'Topic_{i+1}' for i in range(n_topics)]
 topic_df = pd.DataFrame(lda_output, columns=topic_cols)
-topic_df['date'] = news_df['date'].reset_index(drop=True)
-topic_df['year_month'] = topic_df['date'].dt.to_period('M')
+topic_df['Date'] = news_df['Date'].reset_index(drop=True)
+topic_df['year_month'] = topic_df['Date'].dt.to_period('M')
 
 # Group by month and calculate average topic prevalence
 monthly_topics = topic_df.groupby('year_month').mean().reset_index()
-monthly_topics['year_month'] = monthly_topics['year_month'].dt.to_timestamp()
+monthly_topics['year_month_ts'] = monthly_topics['year_month'].dt.to_timestamp()
 
 # Plot topic evolution over time
 plt.figure(figsize=(15, 10))
 for i, topic_col in enumerate(topic_cols):
-    plt.plot(monthly_topics['year_month'], monthly_topics[topic_col], label=f'Topic {i+1}')
+    plt.plot(monthly_topics['year_month_ts'], monthly_topics[topic_col], label=f'Topic {i+1}')
 
 plt.title('Evolution of Topics Over Time')
 plt.xlabel('Date')
