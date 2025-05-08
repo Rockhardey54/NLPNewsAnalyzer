@@ -22,4 +22,4 @@ python -m spacy download en_core_web_md
 
 :: Run the Jupyter notebook
 echo Running Jupyter notebook...
-jupyter notebook --no-browser --port=8888 "%PROJECT_DIR%\headlines.ipynb"
+jupyter notebook --port=8888 "%PROJECT_DIR%\headlines.ipynb"
