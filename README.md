@@ -72,20 +72,51 @@ Distribution of sentence/token counts
 More advanced topics such as topic modeling (LDA) and transformer-based models (like DistilBERT) may be added in future iterations.
 
 ---
-🚀 Getting Started
-Clone the repo
+## 🚀  Getting Started
+
+# Option A
+
+1. Clone the repo
 
 ```
 git clone https://github.com/emrehannn/NLPNewsAnalyzer.git
 
 ```
-Install dependencies
+
+2. Run run.bat for automatic installation of dependencies.
+
+# Option B
+
+1. Clone the repo
+
+```
+git clone https://github.com/emrehannn/NLPNewsAnalyzer.git
+
+```
+2. create a virtual environment
+
+```
+python -m venv venv
+
+```
+
+
+3. Install dependencies 
 
 ```
 pip install -r requirements.txt
 
 ```
-Launch JupyterLab
+
+4. install spacy medium model
+
+```
+python -m spacy download en_core_web_md
+
+```
+
+5. Launch JupyterLab
+
 ```
 jupyter lab
 
