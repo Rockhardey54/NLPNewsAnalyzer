@@ -1,10 +1,10 @@
-## 📰 NLP News Headlines Analysis (2019–2023)
+# 📰 NLP News Headlines Analysis (2019–2023)
 
 
 A comprehensive natural language processing (NLP) project analyzing global news headlines from 2019 to 2023. The focus is on extracting insights from language trends, sentiment patterns, and entity frequencies using classic NLP techniques.
 ***
 
-# 📌 Project Highlights
+## 📌 Project Highlights
 ✅ Cleaned and normalized thousands of real-world news headlines
 
 ✅ Removed stopwords and unified variations of key terms (e.g., "coronavirus" vs. "covid")
@@ -22,7 +22,7 @@ A comprehensive natural language processing (NLP) project analyzing global news 
 
 ## 🧠 Techniques & Libraries Used
 
-# Purpose Tools & Libraries
+## Purpose Tools & Libraries
 
 Data Handling:	pandas, numpy
 
@@ -39,26 +39,26 @@ Practices: Normalization, Lowercasing, Token Unification, Lemmatization
 ***
 
 
-## 🔍 Key Features
+# 🔍 Key Features
 
 
-# 📅 Temporal Sentiment Trends
+## 📅 Temporal Sentiment Trends
 
 Sentiment score evolution from 2019 to 2023
 
 Visualized sentiment polarity by month/year and plotted using matplotlib 
 
-# 🗣️ Token Frequency Analysis
+## 🗣️ Token Frequency Analysis
 
 Top tokens after removing stopwords
 
 Unified semantically similar tokens (e.g., "covid" + "coronavirus")
 
-#  📈 Sentimental Derivative 
+##  📈 Sentimental Derivative 
 
 📊 Avg. tokens per headline
 
-Distribution of sentence/token counts
+📅Distribution of sentence/token counts
 
 📦 Token frequency bar charts
 
@@ -72,9 +72,9 @@ Distribution of sentence/token counts
 More advanced topics such as topic modeling (LDA) and transformer-based models (like DistilBERT) may be added in future iterations.
 
 ---
-## 🚀  Getting Started
+# 🚀  Getting Started
 
-# Option A
+## Option A
 
 1. Clone the repo
 
@@ -85,7 +85,7 @@ git clone https://github.com/emrehannn/NLPNewsAnalyzer.git
 
 2. Run run.bat for automatic installation of dependencies.
 
-# Option B
+## Option B
 
 1. Clone the repo
 
@@ -123,7 +123,7 @@ jupyter lab
 ```
 
 
-🙋‍♂️ Author
+## 🙋‍♂️ Author
 Emre — solo developer passionate about data science and NLP.
 
 Feel free to connect or contribute!
