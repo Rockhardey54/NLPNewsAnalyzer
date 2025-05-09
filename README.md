@@ -16,17 +16,7 @@ Read headlines.ipynb to learn how it is done, and follow along my *TUTORIAL*!
     *   [Tools & Libraries](#tools--libraries)
     *   [Practices](#practices)
 3.  [**🔍 Key Features**](#-key-features)
-    *   [📅 Temporal Sentiment Trends](#-temporal-sentiment-trends)
-    *   [🗣️ Token Frequency Analysis](#️-token-frequency-analysis)
-    *   [📈 Sentimental Derivative](#-sentimental-derivative)
-        *   [Avg. tokens per headline](#avg-tokens-per-headline)
-        *   [Distribution of sentence/token counts](#distribution-of-sentencetoken-counts)
-        *   [Token frequency bar charts](#token-frequency-bar-charts)
-        *   [Sentiment score over time](#sentiment-score-over-time)
-        *   [Box plots of token counts per month](#box-plots-of-token-counts-per-month)
-        *   [Named Entity Recognition (NER) counts](#named-entity-recognition-ner-counts)
 4.  [**Project Findings and Results**](#project-findings-and-results)
-    *   [Initial Data Overview](#this-is-our-starting-data-total-number-of-headlines-we-have-per-month-to-analyze-it-averages-around-25-per-day)
     *   [Token Analysis](#token-analysis)
         *   [Token Distribution](#token-distribution)
         *   [Token Frequencies](#token-frequencies)
@@ -41,7 +31,6 @@ Read headlines.ipynb to learn how it is done, and follow along my *TUTORIAL*!
         *   [TF-IDF Visualization](#tf-idf-visualization)
     *   [Word Embeddings](#word-embeddings)
         *   [Embedding Norms](#embedding-norms)
-        *   [PCA Clusters Visualization](#pca-clusters-visualization)
     *   [Sentiment Analysis](#sentiment-analysis)
         *   [Overall Monthly Sentiment Trend](#all-the-news-headlines-average-of-a-month-are-negative)
         *   [Lets analyze Trump VS Biden](#lets-analyze-trump-vs-biden)
@@ -101,9 +90,7 @@ Top tokens after removing stopwords
 
 Unified semantically similar tokens (e.g., "covid" + "coronavirus")
 
-##  📈 Sentimental Derivative 
-
-📊 Avg. tokens per headline
+##  📈 Sentimental Derivative
 
 📅Distribution of sentence/token counts
 
@@ -113,7 +100,6 @@ Unified semantically similar tokens (e.g., "covid" + "coronavirus")
 
 📊 Box plots of token counts per month
 
-🔠 Named Entity Recognition (NER) counts
 
 # Project Findings and Results
 
