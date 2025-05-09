@@ -6,6 +6,51 @@ A comprehensive natural language processing (NLP) project analyzing global news 
 Read headlines.ipynb to learn how it is done, and follow along my *TUTORIAL*!
 ***
 
+## Table of Contents 
+
+## **📋 Table of Contents**
+
+1.  [**📌 Project Highlights**](#-project-highlights)
+2.  [**🧠 Techniques & Libraries Used**](#-techniques--libraries-used)
+    *   [Purpose](#purpose)
+    *   [Tools & Libraries](#tools--libraries)
+    *   [Practices](#practices)
+3.  [**🔍 Key Features**](#-key-features)
+    *   [📅 Temporal Sentiment Trends](#-temporal-sentiment-trends)
+    *   [🗣️ Token Frequency Analysis](#️-token-frequency-analysis)
+    *   [📈 Sentimental Derivative](#-sentimental-derivative)
+        *   [Avg. tokens per headline](#avg-tokens-per-headline)
+        *   [Distribution of sentence/token counts](#distribution-of-sentencetoken-counts)
+        *   [Token frequency bar charts](#token-frequency-bar-charts)
+        *   [Sentiment score over time](#sentiment-score-over-time)
+        *   [Box plots of token counts per month](#box-plots-of-token-counts-per-month)
+        *   [Named Entity Recognition (NER) counts](#named-entity-recognition-ner-counts)
+4.  [**Project Findings and Results**](#project-findings-and-results)
+    *   [Initial Data Overview](#this-is-our-starting-data-total-number-of-headlines-we-have-per-month-to-analyze-it-averages-around-25-per-day)
+    *   [Token Analysis](#token-analysis)
+        *   [Token Distribution](#token-distribution)
+        *   [Token Frequencies](#token-frequencies)
+    *   [Part Of Speech Tags Analysis](#part-of-speech-tags-analysis)
+        *   [POS Tag Distribution](#pos-tag-distribution)
+        *   [Word Clouds](#word-clouds)
+        *   [Headline POS Tag Sequence Patterns](#headline-pos-tag-sequence-patterns)
+        *   [Headline Length Analysis](#headline-length-analysis)
+        *   [Headline Similarity (Jaccard Index)](#headline-similarity-jaccard-index)
+    *   [Feature Extraction](#feature-extraction)
+        *   [Bag of Words](#bag-of-words)
+        *   [TF-IDF Visualization](#tf-idf-visualization)
+    *   [Word Embeddings](#word-embeddings)
+        *   [Embedding Norms](#embedding-norms)
+        *   [PCA Clusters Visualization](#pca-clusters-visualization)
+    *   [Sentiment Analysis](#sentiment-analysis)
+        *   [Overall Monthly Sentiment Trend](#all-the-news-headlines-average-of-a-month-are-negative)
+        *   [Lets analyze Trump VS Biden](#lets-analyze-trump-vs-biden)
+5.  [**🚀 Getting Started**](#-getting-started)
+    *   [Option A](#option-a)
+    *   [Option B](#option-b)
+6.  [**🙋‍♂️ Author**](#️-author)
+7.  [**🧭 Future Plans**](#-future-plans)
+
 ## 📌 Project Highlights
 ✅ Cleaned and normalized thousands of real-world news headlines
 
