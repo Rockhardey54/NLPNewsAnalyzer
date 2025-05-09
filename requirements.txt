@@ -7,3 +7,4 @@ spacy==3.8.5
 tqdm==4.67.1
 wordcloud==1.9.4
 scikit-learn
+vaderSentiment
