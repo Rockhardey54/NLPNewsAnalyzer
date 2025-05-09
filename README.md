@@ -125,24 +125,24 @@ This is our starting data, total number of headlines we have per month to analyz
 ![Number of Headlines](number_headlines.png)
 
 
-## Token Analysis
+# **Token Analysis**
  
 
-*  **Token Distribution**
+* ## **Token Distribution**
 
  This is the average tokens we have per month to analyze.
 
 ![Token Distribution](token_distribution.png)
 
-*  **Token Frequencies**
+* ## **Token Frequencies**
 
 This has implications we will mention later.
 
 ![Token Frequencies](tokenfrequencies.png)
 
-## Part Of Speech Tags Analysis
+# **Part Of Speech Tags Analysis**
 
-*  **POS Tag Distribution**
+* ##  **POS Tag Distribution**
 
 We can see that around 66% of headlines are made of nouns (proper nouns and common nouns combined.). Data representing numbers and such cannot be trusted as we are stripping them in our normalization. 
 
@@ -152,7 +152,7 @@ Nouns are followed by verbs and adjectives.
 
 ![POS Tag Distribution Fixed](pos_tag_distribution_fixed.png)
 
-* **Word Clouds**
+* ## **Word Clouds**
 
  Covid is NOT the most talked about topic even though it felt like that living through that era, it was actually Donald Trump. More info about this later!
 
@@ -160,7 +160,7 @@ Nouns are followed by verbs and adjectives.
 
 ![POS Word Clouds](pos_word_clouds.png)
 
-* **Headline POS Tag Sequence Patterns**
+* ## **Headline POS Tag Sequence Patterns**
 
  24.3% of 3 word sequences are made out of either proper nouns or common nouns,
 
@@ -170,13 +170,13 @@ Nouns are followed by verbs and adjectives.
 
 ![POS Sequence Patterns](pos_sequence_patterns.png)
 
-* **Headline Length Analysis**
+* ## **Headline Length Analysis**
 
 59.86% of headlines are 6 to 9 words. There is a clear trend here, probably this is the **golden spot** that makes us click more. *Not too long to lose your attention, not too short to miss your attention.*
 
 ![Headline Length Percent Lemma POS Separate](headline_length_percent_lemma_pos_separate.png)
 
-* **Headline Similarity (Jaccard Index)**
+* ## **Headline Similarity (Jaccard Index)**
 
 The finding that 63% of leading daily headlines adhere to a **comparable grammatical structure** indicates that 
 the effectiveness of news conveyance extends beyond our acknowledgment of 6-9 word count. 
@@ -184,24 +184,24 @@ the effectiveness of news conveyance extends beyond our acknowledgment of 6-9 wo
 
 ![Headline POS Similarity](headline_pos_similarity.png)
 
-## Feature Extraction
+# ** Feature Extraction **
 
-* **Bag of Words**
+* # **Bag of Words**
 
 Donald Trump, somehow, is mentioned even more than covid!
 
 ![Most Frequent Words](mostfrequentwords.png)
 
-* **TF-IDF Visualization**
+* ## **TF-IDF Visualization**
 
 These are terms that are frequently identified as important (having high TF-IDF scores) in *many different documents* within the collection. They are not just common words (IDF would penalize those), but rather words that are consistently good at describing the content of various documents.
 This means that while Donald Trump was talked about more, covid19 had more distinguished topics just about it, it was a defining word, a recurring concept.
 
 ![TF-IDF Visualization](tfidf.png)
 
-## Word Embeddings
+# **Word Embeddings**
 
-* **Embedding Norms**
+* ## **Embedding Norms**
 
 This bell-shaped distribution shows that the magnitudes (L2 norms) of the news headline embeddings are mostly similar, clustering around a central value. This suggests a degree of uniformity in how the embedding model represents these headlines, meaning their vector 'lengths' don't vary drastically across the dataset.
 
@@ -211,9 +211,9 @@ This graph demonstrates that the news headline embeddings, when simplified into 
 
 ![PCA Clusters Visualization](pca_clusters_visualization.png)
 
-## Sentiment Analysis
+# **Sentiment Analysis**
 
-* **ALL the News headlines average of a month are negative!** 
+* ## **ALL the News headlines average of a month are negative!** 
  There are no months in 2018-2023 that we had more positive news than negative ones. They are all BELOW 0.00
 
 Is this because bad news are more controversial thus clicked more, and make it easier to top 25? Or is it actually because there are more bad things happening in the world rather than good? 
@@ -221,12 +221,12 @@ Is this because bad news are more controversial thus clicked more, and make it e
 ![Monthly Sentiment Trend](monthly_sentiment_trend.png)
 
 
-## Lets analyze Trump VS Biden.
+## ** Lets analyze Trump VS Biden.**
 
 ![Monthly Sentiment Trump vs Biden](monthly_sentiment_trump_vs_biden.png)
 ![Overall Sentiment Comparison Bar](overall_sentiment_comparison_bar.png)
 
-# **Results reflect the election results!**
+## **Results reflect the election results!**
 
 Checking past News and surveys most people thought Trump was winning again, but News analysis gives as better results. 
 
