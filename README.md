@@ -207,7 +207,7 @@ Is this because bad news are more controversial thus clicked more, and make it e
 ![Monthly Sentiment Trend](monthly_sentiment_trend.png)
 
 
-## **Lets analyze Trump VS Biden.**
+## **Lets analyze Trump VS Biden!**
 
 ![Monthly Sentiment Trump vs Biden](monthly_sentiment_trump_vs_biden.png)
 ![Overall Sentiment Comparison Bar](overall_sentiment_comparison_bar.png)
